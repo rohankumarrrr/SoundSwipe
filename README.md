@@ -9,7 +9,7 @@ Spotify Discover is an interactive music discovery app that helps users explore 
 - **Custom Playlists**: Create personalized playlists from your liked tracks with ease.  
 
 ## Demo  
-![Log-In Screen](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/login.png)
+![Log-In Screen](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/login.png?raw=true)
 ![Swipeable Card](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/swipeable-card.png)
 ![Playlist](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/playlist.png)
 
