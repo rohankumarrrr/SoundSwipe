@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; URL='/'" />
+    <script type="text/javascript">
+      // Parse the full path from the URL
+      (function () {
+        var redirectPath = window.location.pathname || '/';
+
+        // Redirect to the correct path (adjust for SPA routes)
+        if (redirectPath !== '/') {
+          window.location.replace('/#' + redirectPath);
+        } else {
+          window.location.replace('/');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>If you are not redirected automatically, follow this <a href="/">link</a>.</p>
+  </body>
+</html>
