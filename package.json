@@ -2,7 +2,7 @@
   "homepage" : "https://rohankumarrrr.github.io/spotify-discover",
   "name": "spotify-discover",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
