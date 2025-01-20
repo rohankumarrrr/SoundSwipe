@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Spotify Discover 🎵  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Spotify Discover is an interactive music discovery app that helps users explore new tracks from the latest weekly releases across all genres. Swipe right to save songs directly to your Spotify library or swipe left to skip. Build custom playlists from your favorite right-swiped tracks and expand your music library like never before.  
 
-## Available Scripts
+## Features  
+- **Weekly Refresh**: Enjoy a fresh playlist of newly released songs every week.  
+- **Interactive Swiping**: Swipe right to save songs or left to skip them.  
+- **Seamless Spotify Integration**: Automatically add right-swiped tracks to your Spotify saved songs.  
+- **Custom Playlists**: Create personalized playlists from your liked tracks with ease.  
 
-In the project directory, you can run:
+## Demo  
+*(Add screenshots or a link to a live demo if available)*  
 
-### `npm start`
+## Tech Stack  
+- **Frontend**: React.js with modern hooks for an interactive UI.  
+- **Backend**: Node.js and Express for API handling.  
+- **Spotify Web API**: For user authentication, track management, and playback control.  
+- **OAuth 2.0**: Securely authenticate users with Spotify.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites  
+- Node.js (v16 or higher)  
+- Spotify Developer Account with a registered application  
 
-### `npm test`
+### Setup  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**  
+   ```bash  
+   git clone https://github.com/yourusername/spotify-discover.git  
+   cd spotify-discover
+   ```
+2. **Install dependencies**
+  ```bash
+  npm install
+  ```
+3. **Start the development server**
+  ```bash
+  npm start
+  ```
 
-### `npm run build`
+## How It Works
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Authenticate with Spotify:**
+    Log in using your Spotify account to connect the app. Must be a premium account.
+2. **Discover New Tracks:**
+    A playlist of newly released songs is refreshed weekly. The playlist I use to pull songs from can be found here: https://open.spotify.com/playlist/5X8lN5fZSrLnXzFtDEUwb9?si=01210fe8f8f34f71
+3. **Swipe Right or Left:**
+    * Swipe **right** to save a song to your Spotify library.
+    * Swipe **left** to skip a track.
+4. **Build Playlists:**
+    Create and customize playlists with tracks you've swiped right on.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+spotify-discover/  
+│  
+├── public/                # Static assets  
+├── src/                   # Source code  
+│   ├── components/        # React components (e.g., SwipeCard, Playlist, SpotifyPlayerComponent, HeartAnimation)  
+│   └── App.js             # Main app component  
+└── README.md              # Project documentation  
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I welcome contributions! To get started:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m 'Add feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a pull request
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contact
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Have questions or suggestions? Feel free to reach out!
+* **Email**: rohankumar0513@gmail.com
+* **Github**: @rohankumarrrr
