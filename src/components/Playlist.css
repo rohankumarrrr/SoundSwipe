@@ -1,0 +1,117 @@
+.selected-tracks-container {
+    margin-top: 75px;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 8px;
+    align-self: center;
+    width: 650px;
+  }
+  
+  .playlist-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-direction: column;
+  }
+
+  .edit-playlist-name-container {
+    width: 650px;
+    flex-direction: row;
+    border-color: #b3b3b3;
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+  }
+
+  .edit-icon {
+    width: 28px;
+    height: 28px;
+    filter: invert(100%);
+    position: relative;
+    top: 6px;
+    left: 5px;
+  }
+  
+  .playlist-name-input {
+    width: 572px;
+    font-size: 28px;
+    padding-bottom: 5px;
+    font-family: 'Gotham';
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    margin-left: 28px;
+    border: none;
+  }
+  
+  .create-playlist-btn {
+    background-color: #121212;
+    width: 170px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Gotham';
+    font-size: 12px;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b3b3b3;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .create-playlist-btn:hover {
+    background-color: #1db954;
+  }
+
+  .track-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  .track-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .track-cover {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  
+  .track-details {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .track-name {
+    font-size: 14px;
+    font-family: 'Gotham';
+    color: white;
+  }
+  
+  .track-artist {
+    font-size: 12px;
+    font-family: 'Gotham';
+    color: #b3b3b3;
+  }
+  
+  .delete-track-btn {
+    background-color: #121212;
+    border: none;
+    cursor: pointer;
+  }
+
+  .delete-track-btn-svg:hover {
+    filter: invert(50%)
+  }

@@ -1,0 +1,31 @@
+/* SwipeableCard.css */
+.swipeable-card {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: #1db954;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+  
+.swipeable-card:active {
+  cursor: grabbing;
+}
+
+.track-card-image {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.track-card-details {
+  margin-top: 10px;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+.heart-animation {
+    position: absolute;
+    animation: scaleUp 1s ease-out forwards;
+    z-index: 10;
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+.heart-icon-svg {
+    filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.2));
+}

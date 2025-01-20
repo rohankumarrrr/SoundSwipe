@@ -1,0 +1,9 @@
+.mute-img {
+    filter: invert(100%);
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.mute-img:hover {
+    opacity: 1
+}
