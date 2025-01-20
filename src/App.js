@@ -9,7 +9,7 @@ import HeartAnimation from "./components/HeartAnimation";
 import Playlist from "./components/Playlist";
 
 const CLIENT_ID = "473b2e893cb64d4aa636f07174c384ea"; // Replace with your Spotify Client ID
-const REDIRECT_URI = "https://rohankumarrrr.github.io/spotify-discover"; // Replace with your redirect URI
+const REDIRECT_URI = "https://rohankumarrrr.github.io/Spotify-Discover/callback"; // Replace with your redirect URI
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 const SCOPES = [
