@@ -9,7 +9,9 @@ Spotify Discover is an interactive music discovery app that helps users explore 
 - **Custom Playlists**: Create personalized playlists from your liked tracks with ease.  
 
 ## Demo  
-*(Add screenshots or a link to a live demo if available)*  
+![Log-In Screen](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/login.png)
+![Swipeable Card](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/swipeable-card.png)
+![Playlist](https://github.com/rohankumarrrr/spotify-discover/public/screenshots/playlist.png)
 
 ## Tech Stack  
 - **Frontend**: React.js with modern hooks for an interactive UI.  
@@ -77,5 +79,6 @@ This project is licensed under the [MIT License](https://www.mit.edu/~amini/LICE
 ## Contact
 
 Have questions or suggestions? Feel free to reach out!
+
 * **Email**: rohankumar0513@gmail.com
 * **Github**: @rohankumarrrr
