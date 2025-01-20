@@ -14,15 +14,14 @@ Spotify Discover is an interactive music discovery app that helps users explore 
 ![Playlist](https://github.com/rohankumarrrr/Spotify-Discover/blob/main/public/screenshots/playlist.png)
 
 ## Tech Stack  
-- **Frontend**: React.js with modern hooks for an interactive UI.  
-- **Backend**: Node.js and Express for API handling.  
+- **Application**: React.js with modern hooks for an interactive UI.  
 - **Spotify Web API**: For user authentication, track management, and playback control.  
 - **OAuth 2.0**: Securely authenticate users with Spotify.  
 
 ## Getting Started  
 
 ### Prerequisites  
-- Node.js (v16 or higher)  
+- React.js
 - Spotify Developer Account with a registered application  
 
 ### Setup  
