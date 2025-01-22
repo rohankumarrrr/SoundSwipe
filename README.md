@@ -1,6 +1,6 @@
-# Spotify Discover 🎵  
+# SoundSwipe 🎵  
 
-Spotify Discover is an interactive music discovery app that helps users explore new tracks from the latest weekly releases across all genres. Swipe right to save songs directly to your Spotify library or swipe left to skip. Build custom playlists from your favorite right-swiped tracks and expand your music library like never before.  
+SoundSwipe is an interactive music discovery app that helps users explore new tracks from the latest weekly releases across all genres. Swipe right to save songs directly to your Spotify library or swipe left to skip. Build custom playlists from your favorite right-swiped tracks and expand your music library like never before.  
 
 ## Features  
 - **Weekly Refresh**: Enjoy a fresh playlist of newly released songs every week.  
@@ -9,9 +9,9 @@ Spotify Discover is an interactive music discovery app that helps users explore 
 - **Custom Playlists**: Create personalized playlists from your liked tracks with ease.  
 
 ## Demo  
-![Log-In Screen](https://github.com/rohankumarrrr/Spotify-Discover/blob/main/public/screenshots/login.png)
-![Swipeable Card](https://github.com/rohankumarrrr/Spotify-Discover/blob/main/public/screenshots/swipeable-card.png)
-![Playlist](https://github.com/rohankumarrrr/Spotify-Discover/blob/main/public/screenshots/playlist.png)
+![Log-In Screen](https://github.com/rohankumarrrr/SoundSwipe/blob/main/public/screenshots/login.png)
+![Swipeable Card](https://github.com/rohankumarrrr/SoundSwipe/blob/main/public/screenshots/swipeable-card.png)
+![Playlist](https://github.com/rohankumarrrr/SoundSwipe/blob/main/public/screenshots/playlist.png)
 
 ## Tech Stack  
 - **Application**: React.js with modern hooks for an interactive UI.  

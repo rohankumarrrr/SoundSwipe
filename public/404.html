@@ -3,20 +3,24 @@
   <head>
     <meta http-equiv="refresh" content="0; URL='/'" />
     <script type="text/javascript">
-      // Parse the full path from the URL
       (function () {
-        var redirectPath = window.location.pathname || '/';
+        // Extract the pathname from the URL
+        var path = window.location.pathname;
+        var basePath = '/SoundSwipe'; // Ensure this matches your GitHub Pages app's base path
 
-        // Redirect to the correct path (adjust for SPA routes)
-        if (redirectPath !== '/') {
-          window.location.replace('/#' + redirectPath);
+        // Check if the pathname is valid and not just the base path
+        if (path.startsWith(basePath) && path !== basePath && path !== basePath + '/') {
+          // Redirect to the correct React route by appending it as a hash
+          var newUrl = basePath + '/#' + path.replace(basePath, '');
+          window.location.replace(newUrl);
         } else {
-          window.location.replace('/');
+          // Redirect to the base URL if no specific path is found
+          window.location.replace(basePath + '/');
         }
       })();
     </script>
   </head>
   <body>
-    <p>If you are not redirected automatically, follow this <a href="/">link</a>.</p>
+    <p>If you are not redirected automatically, follow this <a href="/SoundSwipe">link</a>.</p>
   </body>
 </html>

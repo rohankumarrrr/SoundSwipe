@@ -138,7 +138,7 @@ const SpotifyPlayerComponent = ({ token, track }) => {
       if (trackUri) {
         setTimeout(() => {
           playTrack(trackUri); // Attempt playback after a short delay
-        }, 300); // 1-second delay, you can adjust this as needed
+        }, 750); // 1-second delay, you can adjust this as needed
       } else {
         pausePlayback();
       }

@@ -1,6 +1,6 @@
 {
   "homepage": ".",
-  "name": "spotify-discover",
+  "name": "soundswipe",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
