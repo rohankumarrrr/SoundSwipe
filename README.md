@@ -28,8 +28,8 @@ SoundSwipe is an interactive music discovery app that helps users explore new tr
 
 1. **Clone the repository**  
    ```bash  
-   git clone https://github.com/yourusername/spotify-discover.git  
-   cd spotify-discover
+   git clone https://github.com/yourusername/SoundSwipe.git  
+   cd SoundSwipe
    ```
 2. **Install dependencies**
   ```bash
@@ -54,11 +54,11 @@ SoundSwipe is an interactive music discovery app that helps users explore new tr
 
 ## Folder Structure
 
-spotify-discover/  
+SoundSwipe/  
 │  
 ├── public/                # Static assets  
 ├── src/                   # Source code  
-│   ├── components/        # React components (e.g., SwipeCard, Playlist, SpotifyPlayerComponent, HeartAnimation)  
+│   ├── components/        # React components and styles (e.g., Home, Callback, SwipeCard, Playlist, SpotifyPlayerComponent, HeartAnimation)  
 │   └── App.js             # Main app component  
 └── README.md              # Project documentation  
 

@@ -243,10 +243,15 @@ const Home = () => {
           },
         }
       );
-    
+        
+      alert("Playlist created successfully!");
     } catch (error) {
       console.error("Error creating playlist:", error);
-      alert("Error creating playlist. Please try again.");
+      if (!tracks || tracks?.length == 0) {
+        alert("You must add at least one song to create a playlist");
+      } else {
+        alert("Error creating playlist. Please try again.");
+      }
     }
   };
 
