@@ -1,6 +1,6 @@
 {
-  "short_name": "Spotify Discover",
-  "name": "Spotify Discover",
+  "short_name": "SoundSwipe",
+  "name": "SoundSwipe",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "sd-icon.png",
+      "src": "soundswipe-icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "sd-icon.png",
+      "src": "soundswipe-icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
