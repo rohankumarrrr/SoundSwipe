@@ -8,6 +8,10 @@ html, body {
   overflow-y: auto;
 }
 
+body {
+  width: 100%;
+}
+
 .App {
   display: flex;
   flex-direction: column;

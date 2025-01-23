@@ -16,7 +16,6 @@ const SCOPES = [
   "user-read-private",
   "user-read-email",
   "playlist-read-private",
-  "user-top-read",
   "user-library-read",
   "user-library-modify",
   "playlist-modify-public",

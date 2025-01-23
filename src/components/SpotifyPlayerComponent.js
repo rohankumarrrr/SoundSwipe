@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { isMobile, isTablet } from "react-device-detect";
 import './SpotifyPlayerComponent.css';
 import SpeakerOffIcon from '../assets/images/speaker-off.png';
 import SpeakerOnIcon from '../assets/images/speaker-on.png';
@@ -10,26 +11,64 @@ const SpotifyPlayerComponent = ({ token, track }) => {
   const [isMuted, setIsMuted] = useState(false);
   const [isPlayerReady, setIsPlayerReady] = useState(false); // Track if the player is ready
 
+
   useEffect(() => {
+
+    if (isMobile || isTablet) {
+      alert("Playback is not supported on mobile browsers. Please use the app on web.");
+    }
+
     const loadSpotifySDK = () => {
       return new Promise((resolve, reject) => {
+        // Check if the script is already loaded
         const existingScript = document.getElementById("spotify-sdk");
         if (existingScript) {
           resolve();
           return;
         }
-
+  
+        // Define onSpotifyWebPlaybackSDKReady globally BEFORE adding the script
+        if (!window.onSpotifyWebPlaybackSDKReady) {
+          window.onSpotifyWebPlaybackSDKReady = () => {
+            const playerInstance = new window.Spotify.Player({
+              name: "Spotify Web Player",
+              getOAuthToken: (cb) => cb(token),
+              volume: 0.5,
+            });
+  
+            // Set up event listeners for the player
+            playerInstance.addListener("ready", ({ device_id }) => {
+              setDeviceId(device_id);
+              transferPlayback(device_id);
+              setIsPlayerReady(true);
+            });
+  
+            playerInstance.addListener("initialization_error", ({ message }) => {
+              console.error("Initialization Error:", message);
+            });
+  
+            playerInstance.addListener("authentication_error", ({ message }) => {
+              console.error("Authentication Error:", message);
+            });
+  
+            playerInstance.connect();
+            setPlayer(playerInstance);
+          };
+        }
+  
+        // Load the Spotify SDK script
         const script = document.createElement("script");
         script.id = "spotify-sdk";
         script.src = "https://sdk.scdn.co/spotify-player.js";
         script.async = true;
-
+  
         script.onload = resolve;
         script.onerror = () => reject(new Error("Failed to load Spotify SDK"));
+  
         document.body.appendChild(script);
       });
     };
-
+  
     const transferPlayback = async (id) => {
       const url = "https://api.spotify.com/v1/me/player";
       const headers = {
@@ -38,62 +77,35 @@ const SpotifyPlayerComponent = ({ token, track }) => {
       };
       const body = JSON.stringify({
         device_ids: [id],
-        play: false, // Start paused initially
+        play: false,
       });
-
+  
       try {
         const response = await fetch(url, { method: "PUT", headers, body });
         if (!response.ok) {
           const errorData = await response.json();
           console.error("Transfer Playback Error:", errorData);
-        } else {
-          // console.log("Playback transferred to device:", id);
         }
       } catch (error) {
         console.error("Network or Fetch Error:", error);
       }
     };
-
-    const initializePlayer = async () => {
-      await loadSpotifySDK();
-
-      window.onSpotifyWebPlaybackSDKReady = () => {
-        const playerInstance = new window.Spotify.Player({
-          name: "Spotify Web Player",
-          getOAuthToken: (cb) => cb(token),
-          volume: 0.5,
-        });
-
-        playerInstance.addListener("ready", ({ device_id }) => {
-          // console.log("Player Ready with Device ID:", device_id);
-          setDeviceId(device_id);
-          transferPlayback(device_id); // Ensure playback transfer
-          setIsPlayerReady(true); // Set player as ready
-        });
-
-        playerInstance.addListener("player_state_changed", (state) => {
-          if (!state) return;
-          // console.log("Player State Changed:", state);
-        });
-
-        playerInstance.connect();
-        setPlayer(playerInstance);
-      };
-    };
-
-    initializePlayer();
-
+  
+    // Initialize the SDK and Player
+    loadSpotifySDK();
+  
     return () => {
       if (player) {
         player.disconnect();
       }
+      delete window.onSpotifyWebPlaybackSDKReady; // Clean up the global function
     };
   }, [token]);
 
   const playTrack = async (uri) => {
     if (!uri) return;
 
-    const url = "https://api.spotify.com/v1/me/player/play";
+    const url = "https://api.spotify.com/v1/me/player/play?device_id=" + deviceId;
     const headers = {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
@@ -138,7 +150,7 @@ const SpotifyPlayerComponent = ({ token, track }) => {
       if (trackUri) {
         setTimeout(() => {
           playTrack(trackUri); // Attempt playback after a short delay
-        }, 750); // 1-second delay, you can adjust this as needed
+        }, 500); // 0.5-second delay, you can adjust this as needed
       } else {
         pausePlayback();
       }
